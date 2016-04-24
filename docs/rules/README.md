@@ -154,6 +154,7 @@ These rules relate to style guidelines, and are therefore quite subjective:
 * [block-spacing](block-spacing.md): enforce consistent spacing inside single-line blocks (fixable)
 * [brace-style](brace-style.md): enforce consistent brace style for blocks
 * [camelcase](camelcase.md): enforce camelcase naming convention
+* [class-padding](class-padding.md): enforce consistent padding between class methods
 * [comma-spacing](comma-spacing.md): enforce consistent spacing before and after commas (fixable)
 * [comma-style](comma-style.md): enforce consistent comma style
 * [computed-property-spacing](computed-property-spacing.md): enforce consistent spacing inside computed property brackets (fixable)

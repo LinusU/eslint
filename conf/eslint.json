@@ -134,6 +134,7 @@
         "brace-style": "off",
         "callback-return": "off",
         "camelcase": "off",
+        "class-padding": "off",
         "comma-dangle": "error",
         "comma-spacing": "off",
         "comma-style": "off",
