@@ -154,7 +154,6 @@ These rules relate to style guidelines, and are therefore quite subjective:
 * [block-spacing](block-spacing.md): enforce consistent spacing inside single-line blocks (fixable)
 * [brace-style](brace-style.md): enforce consistent brace style for blocks
 * [camelcase](camelcase.md): enforce camelcase naming convention
-* [class-padding](class-padding.md): enforce consistent padding between class methods
 * [comma-spacing](comma-spacing.md): enforce consistent spacing before and after commas (fixable)
 * [comma-style](comma-style.md): enforce consistent comma style
 * [computed-property-spacing](computed-property-spacing.md): enforce consistent spacing inside computed property brackets (fixable)
@@ -171,6 +170,7 @@ These rules relate to style guidelines, and are therefore quite subjective:
 * [keyword-spacing](keyword-spacing.md): enforce consistent spacing before and after keywords (fixable)
 * [linebreak-style](linebreak-style.md): enforce consistent linebreak style (fixable)
 * [lines-around-comment](lines-around-comment.md): require empty lines around comments
+* [lines-between-class-methods](lines-between-class-methods.md): enforce consistent padding between class methods
 * [max-depth](max-depth.md): enforce a maximum depth that blocks can be nested
 * [max-len](max-len.md): enforce a maximum line length
 * [max-nested-callbacks](max-nested-callbacks.md): enforce a maximum depth that callbacks can be nested

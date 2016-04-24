@@ -1,6 +1,6 @@
-# Enforce padding between class methods (class-padding)
+# Enforce lines between class methods (lines-between-class-methods)
 
-Some style guides require class methods to have a blank line between them. The
+Some style guides require class methods to have a empty line between them. The
 goal is to improve readability by visually separating the methods from each
 other.
 
@@ -16,26 +16,26 @@ class T {
 }
 ```
 
-Since it's good to have a consistent code style, you should either always write
-padding between methods or never do it.
+Since it's good to have a consistent code style, you should either always add a
+empty line between methods or never do it.
 
 ## Rule Details
 
-This rule enforces consistent padding between class methods.
+This rule enforces empty lines between class methods.
 
 ## Options
 
 This rule has a string option:
 
-* `"always"` (default) requires padding between class methods
-* `"never"` disallows padding between class methods
+* `"always"` (default) requires one or more empty line between class methods
+* `"never"` disallows empty lines between class methods
 
 ### always
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
 ```js
-/*eslint class-padding: ["error", "always"]*/
+/*eslint lines-between-class-methods: ["error", "always"]*/
 
 class T {
   a () {
@@ -55,17 +55,6 @@ class T {
     // ...
   }
   c () {
-    // ...
-  }
-}
-
-class T {
-  a () {
-    // ...
-  }
-
-
-  b () {
     // ...
   }
 }
@@ -84,7 +73,7 @@ class T {
 Examples of **correct** code for this rule with the default `"always"` option:
 
 ```js
-/*eslint class-padding: ["error", "always"]*/
+/*eslint lines-between-class-methods: ["error", "always"]*/
 
 class T {
   a () {
@@ -106,6 +95,17 @@ class T {
   }
 
   c () {
+    // ...
+  }
+}
+
+class T {
+  a () {
+    // ...
+  }
+
+
+  b () {
     // ...
   }
 }
@@ -127,7 +127,7 @@ class T {
 Examples of **incorrect** code for this rule with the `"never"` option:
 
 ```js
-/*eslint class-padding: ["error", "never"]*/
+/*eslint lines-between-class-methods: ["error", "never"]*/
 
 class T {
   a () {
@@ -167,7 +167,7 @@ class T {
 Examples of **correct** code for this rule with the `"never"` option:
 
 ```js
-/*eslint class-padding: ["error", "never"]*/
+/*eslint lines-between-class-methods: ["error", "never"]*/
 
 class T {
   a () {
@@ -203,4 +203,4 @@ class T {
 
 ## When Not To Use It
 
-You can turn this rule off if you are not concerned with the consistency of padding between class methods.
+You can turn this rule off if you are not concerned with the consistency of spacing between class methods.
