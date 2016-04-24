@@ -51,6 +51,56 @@ ruleTester.run("class-padding", rule, {
             code: "class T {\na() {}\n\nb() {}\n\nc() {}\n\nd() {}\n}",
             options: ["always"],
             parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n\n// b\nb() {}\n}",
+            options: ["always"],
+            parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n\n/*\n\n\n*/\nb() {}\n}",
+            options: ["always"],
+            parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n/*\n\n\n*/\n\nb() {}\n}",
+            options: ["always"],
+            parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n/*\n\n\n*/\n\n/*\n\n\n*/\nb() {}\n}",
+            options: ["always"],
+            parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n\n/**/ b() {}\n}",
+            options: ["always"],
+            parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n// b\nb() {}\n}",
+            options: ["never"],
+            parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n/*\n\n\n*/\nb() {}\n}",
+            options: ["never"],
+            parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n/*\n\n\n*/\nb() {}\n}",
+            options: ["never"],
+            parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n/*\n\n\n*/\n/*\n\n\n*/\nb() {}\n}",
+            options: ["never"],
+            parserOptions: { ecmaVersion: 6 }
+        },
+        {
+            code: "class T {\na() {}\n/**/ b() {}\n}",
+            options: ["never"],
+            parserOptions: { ecmaVersion: 6 }
         }
     ],
     invalid: [
@@ -156,6 +206,42 @@ ruleTester.run("class-padding", rule, {
                 {
                     message: ALWAYS_MESSAGE,
                     line: 5,
+                    column: 1
+                }
+            ]
+        },
+        {
+            code: "class T {\na() {}\n// 1\n// 2\nb() {}\n}",
+            options: ["always"],
+            parserOptions: { ecmaVersion: 6 },
+            errors: [
+                {
+                    message: ALWAYS_MESSAGE,
+                    line: 5,
+                    column: 1
+                }
+            ]
+        },
+        {
+            code: "class T {\na() {}\n// 1\n\n// 3\nb() {}\n}",
+            options: ["never"],
+            parserOptions: { ecmaVersion: 6 },
+            errors: [
+                {
+                    message: NEVER_MESSAGE,
+                    line: 6,
+                    column: 1
+                }
+            ]
+        },
+        {
+            code: "class T {\na() {}\n\n// 2\n// 3\nb() {}\n}",
+            options: ["never"],
+            parserOptions: { ecmaVersion: 6 },
+            errors: [
+                {
+                    message: NEVER_MESSAGE,
+                    line: 6,
                     column: 1
                 }
             ]

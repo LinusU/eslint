@@ -69,6 +69,16 @@ class T {
     // ...
   }
 }
+
+class T {
+  a () {
+    // ...
+  }
+  // comment
+  b () {
+    // ...
+  }
+}
 ```
 
 Examples of **correct** code for this rule with the default `"always"` option:
@@ -96,6 +106,17 @@ class T {
   }
 
   c () {
+    // ...
+  }
+}
+
+class T {
+  a () {
+    // ...
+  }
+
+  // comment
+  b () {
     // ...
   }
 }
@@ -165,6 +186,16 @@ class T {
     // ...
   }
   c () {
+    // ...
+  }
+}
+
+class T {
+  a () {
+    // ...
+  }
+  // comment
+  b () {
     // ...
   }
 }
