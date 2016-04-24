@@ -170,6 +170,7 @@ These rules relate to style guidelines, and are therefore quite subjective:
 * [keyword-spacing](keyword-spacing.md): enforce consistent spacing before and after keywords (fixable)
 * [linebreak-style](linebreak-style.md): enforce consistent linebreak style (fixable)
 * [lines-around-comment](lines-around-comment.md): require empty lines around comments
+* [lines-between-class-methods](lines-between-class-methods.md): enforce consistent padding between class methods
 * [max-depth](max-depth.md): enforce a maximum depth that blocks can be nested
 * [max-len](max-len.md): enforce a maximum line length
 * [max-nested-callbacks](max-nested-callbacks.md): enforce a maximum depth that callbacks can be nested
